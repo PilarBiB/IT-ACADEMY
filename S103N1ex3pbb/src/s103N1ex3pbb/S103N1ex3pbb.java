@@ -1,7 +1,11 @@
 package s103N1ex3pbb;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
+import java.util.Objects;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 public class S103N1ex3pbb {
 	
@@ -42,6 +46,9 @@ public class S103N1ex3pbb {
 		int posicio = 0;
 		ArrayList personatjesArrayList = new ArrayList();	
 		LinkedList personatjesLinkedList = new LinkedList();
+		HashSet personatjesHashSet = new HashSet();
+		LinkedHashSet personatjesLinkedHashSet = new LinkedHashSet();
+		TreeSet personatjesTreeSet = new TreeSet();
 		
 			do {
 				System.out.println("Premer 1 per generar el nom d'un personatge de la serie d'Star Trek i 2 per aturar");	
@@ -53,6 +60,9 @@ public class S103N1ex3pbb {
 					
 					omplirArrayList(personatjes, posicio, personatjesArrayList);
 					omplirLinkedList(personatjes, posicio, personatjesLinkedList);
+					omplirHashSet(personatjes, posicio, personatjesHashSet);
+					omplirLinkedHashSet(personatjes, posicio, personatjesLinkedHashSet);
+					omplirTreeSet(personatjes, posicio, personatjesTreeSet);
 					
 					posicio = posicio+1;
 					
@@ -72,8 +82,18 @@ public class S103N1ex3pbb {
 					System.out.println("LLISTAT DE L'ARRAYLIST GENERAT");
 					llistarArrayList(personatjesArrayList);
 						System.out.println();
-					System.out.println("LLISTAT DE L'LINKEDLIST GENERAT");
+					System.out.println("LLISTAT DEL LINKEDLIST GENERAT");
 					llistarLinkedList(personatjesLinkedList);
+						System.out.println();
+					System.out.println("LLISTAT DEL HASHSET GENERAT");
+					llistarHashSet(personatjesHashSet);					
+						System.out.println();
+					System.out.println("LLISTAT DEL LINKEDSET GENERAT");
+					llistarLinkedHashSet(personatjesLinkedHashSet);					
+						System.out.println();
+					System.out.println("LLISTAT DEL TREESET GENERAT");
+					llistarTreeSet(personatjesTreeSet);						
+					
 
 					break;
 				}else {
@@ -88,7 +108,7 @@ public class S103N1ex3pbb {
 	}
 	public  static void llistarArrayList(ArrayList personatjesArrayList) {
 			 
-			System.out.println(personatjesArrayList);	
+		System.out.println(personatjesArrayList);	
 	}
 	private static void omplirLinkedList(Generadora[] personatjes, int posicio, LinkedList personatjesLinkedList) {
 		
@@ -96,8 +116,32 @@ public class S103N1ex3pbb {
 	}
 	public  static void llistarLinkedList(LinkedList personatjesLinkedList) {
 			 
-			System.out.println(personatjesLinkedList);	
-	}	
+		System.out.println(personatjesLinkedList);	
+	}
+	private static void omplirHashSet(Generadora[] personatjes, int posicio, HashSet personatjesHashSet) {
+		
+		personatjesHashSet.add(personatjes[posicio].getNom());
+	}
+	public  static void llistarHashSet(HashSet personatjesHashSet) {
+			 
+		System.out.println(personatjesHashSet);	
+	}
+	private static void omplirLinkedHashSet(Generadora[] personatjes, int posicio, LinkedHashSet personatjesLinkedHashSet) {
+		
+		personatjesLinkedHashSet.add(personatjes[posicio].getNom());
+	}
+	public  static void llistarLinkedHashSet(LinkedHashSet personatjesLinkedHashSet) {
+			 
+		System.out.println(personatjesLinkedHashSet);	
+	}
+	private static void omplirTreeSet(Generadora[] personatjes, int posicio, TreeSet personatjesTreeSet) {
+		
+		personatjesTreeSet.add(personatjes[posicio].getNom());
+	}
+	public  static void llistarTreeSet(TreeSet personatjesTreeSet) {
+			 
+		System.out.println(personatjesTreeSet);	
+	}
 }
 class Generadora{
 	private String nom;
@@ -112,7 +156,23 @@ class Generadora{
 	}
 	public void setNom(String nom) {
 		this.nom = nom;	
-	}		
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(nom);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Generadora other = (Generadora) obj;
+		return Objects.equals(nom, other.nom);
+	}	
+	
 }
 		
 
