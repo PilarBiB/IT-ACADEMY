@@ -11,7 +11,7 @@ public class S105N1ex2pbb {
 		// TODO Auto-generated method stub
 		
 		Scanner sc = new Scanner (System.in);
-		System.out.println("Indica l'adreça del directori que vols llistar alfabeticament (Ex: C:/Users/pilar/Desktop/IT-Academy/Directori 1) ");
+		System.out.println("Indica l'adreça del directori que vols llistar alfabeticament (Ex C:/Users/pilar/Desktop/IT-Academy/Directori 1) ");
 		String adreça = sc.nextLine();
 		//String adreça = "C:/Users/pilar/Desktop/IT-Academy/Directori 1";
 		listFiles(adreça);
