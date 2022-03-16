@@ -1,0 +1,71 @@
+
+BASE DE DADES RESTAURANTS
+MongoDB queries
+
+1.
+
+{}
+
+2.
+
+{project: { restaurant_id: 1,borough: 1,cuisine: 1}
+
+3.
+
+{project: { _id: 0,restaurant_id: 1, borough: 1,cuisine: 1}
+
+4.
+
+{project: { _id: 0,restaurant_id: 1,name: 1,borough: 1,'address.zipcode': 1}}
+
+5.
+
+{filter: { borough: 'Bronx'}}
+
+6.
+
+{filter: {borough: 'Bronx'},limit: 5}
+
+7.
+
+{filter: { borough: 'Bronx'},skip: 5,limit: 5}
+
+8.
+
+{filter: { 'grades.score': {$gte: 90}}}
+
+9.
+
+{filter: {grades: {$elemMatch: {$and: [{score:{$gt:80,$lt:100}}]}}}}
+
+10.
+
+{filter: {'address.coord.0': { $lt: -95.754168}}}
+
+11.
+
+{filter: {cuisine: {$ne: 'American '},'grades.score': {$gt: 70},'address.coord.0': { $lt: -65.754168}}}
+
+12.
+
+{filter: {cuisine: {$ne: 'American '},'grades.score': {$gt: 70},'address.coord.0': { $lt: -65.754168}}}
+
+13.
+
+{cuisine: {$ne: 'American '},'grades.grade': 'A', borough: { $ne: 'Brooklyn'}
+
+14.
+
+{filter: { name: RegExp('^Wil')},project: {restaurant_id: 1,name: 1,borough: 1,cuisine: 1}}
+
+15.
+
+{filter: { name: RegExp('ces$')},project: {restaurant_id: 1,name: 1,borough: 1,cuisine: 1}
+
+16.
+
+{filter: { name: RegExp('Reg')},project: {restaurant_id: 1,name: 1,borough: 1,cuisine: 1}}
+
+17.
+
+{filter: {borough: 'Bronx',$or:[{cuisine:'American '},{cuisine:'Chinese'}]}}
