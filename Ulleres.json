@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "622e0b0b2afb73641655c3f4"
+  },
+  "idUlleres": 1,
+  "Graduació_vidre_dret": 3,
+  "Graduació_vidre_esquerre": 2,
+  "Color_montura": "Negre",
+  "Color_vidres": "Transparent",
+  "Preu": 150,
+  "Empleat": {
+    "idEmpleat": 1,
+    "Nom empleat": "Carlos"
+  },
+  "Client": {
+    "idClient": 1,
+    "Nom": "Mike",
+    "Carrer": "Major",
+    "Nº": 1,
+    "Pis": 1,
+    "Porta": 1,
+    "Ciutat": "Girona",
+    "CP": "17001",
+    "País": "Espanya",
+    "Telèfon": 607607607,
+    "Correu electrònic": "mike@gmail.com",
+    "Data registre": "01/01/2001",
+    "idClient recomanació": 1
+  },
+  "Marca": {
+    "idMarca": 1,
+    "Nom": "Ray-Ban Aviator",
+    "Proveidor": {
+      "idproveidor": 1,
+      "Nom": "Ray-Ban",
+      "Carrer": "Major",
+      "Nº": 1,
+      "Pis": 1,
+      "Porta": 1,
+      "Ciutat": "Bcn",
+      "CP": "08001",
+      "País": "Espanya",
+      "Telèfon": 617617617,
+      "Fax": 939393939,
+      "NIF": 36136136
+    }
+  }
+}]

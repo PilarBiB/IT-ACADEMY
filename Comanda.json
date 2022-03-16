@@ -1,0 +1,91 @@
+[{
+  "_id": {
+    "$oid": "623227ef1b7871297629071a"
+  },
+  "idComanda": 1,
+  "Data_Hora": "01/01/2001T01:01:01",
+  "Entrega": "Domicili",
+  "Productes": {
+    "Pizzes": [
+      {
+        "idPizza": 1,
+        "Categoria": "Bàsica",
+        "Nom": "Carbonara",
+        "Descripció": "Formatge, tomàquet, orenga, baicon, crema de llet",
+        "Imatge": "Foto",
+        "Preu": 12,
+        "Quantitat": 2
+      }
+    ],
+    "Hamburgueses": [
+      {
+        "idHamburguesa": 1,
+        "Nom": "Vedella amb formatge",
+        "Descripció": "Carn de vedella, formatge, enciam, tomàquet",
+        "Imatge": "Foto",
+        "Preu": 15,
+        "Quantitat": 2
+      }
+    ],
+    "Begudes": [
+      {
+        "idBeguda": 1,
+        "Nom": "Cocacola",
+        "Descripció": "Light",
+        "Imatge": "Foto",
+        "Preu": 3,
+        "Quantitat": 4
+      }
+    ]
+  },
+  "Empleat": {
+    "idEmpleat": 1,
+    "Nom": "Luca",
+    "Cognom1": "Mateo",
+    "Cognom2": "Diaz",
+    "NIF": "30101010A",
+    "Telèfon": 607607607,
+    "Funció": "Repartidor"
+  },
+  "Botiga": {
+    "idBotiga": 1,
+    "Adreça": {
+      "Carrer": "Major",
+      "Nº": 1,
+      "Porta": 1,
+      "Pis": 1,
+      "CP": "08001",
+      "Localitat": {
+        "idLocalitat": 1,
+        "Nom": "Esplugues"
+      },
+      "Província": {
+        "idProvincia": 1,
+        "Nom": "Barcelona"
+      }
+    }
+  },
+  "Client": {
+    "idClient": 1,
+    "Nom": "Oscar",
+    "Cognom1": "Santos",
+    "Cognom2": "Pérez",
+    "Adreça": {
+      "Carrer": "Indústria",
+      "Nº": 1,
+      "Porta": 1,
+      "Pis": 1,
+      "CP": "08002",
+      "Localitat": {
+        "idLocalitat": 2,
+        "Nom": "Cornellà"
+      },
+      "Província": {
+        "idProvincia": 1,
+        "Nom": "Barcelona"
+      }
+    },
+    "Telèfon": 697607607
+  },
+  "Preu total": 66
+}]
