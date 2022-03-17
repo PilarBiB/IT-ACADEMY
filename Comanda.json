@@ -12,7 +12,7 @@
         "Categoria": "Bàsica",
         "Nom": "Carbonara",
         "Descripció": "Formatge, tomàquet, orenga, baicon, crema de llet",
-        "Imatge": "Foto",
+        "Imatge": "https://media.istockphoto.com/photos/pizza-picture-id506469524?k=20&m=506469524&s=612x612&w=0&h=CcY0dYXtJa4LFYIEdaIKjmudvXs73QQnJNOt0WE82R4=",
         "Preu": 12,
         "Quantitat": 2
       }
@@ -22,7 +22,7 @@
         "idHamburguesa": 1,
         "Nom": "Vedella amb formatge",
         "Descripció": "Carn de vedella, formatge, enciam, tomàquet",
-        "Imatge": "Foto",
+        "Imatge": "https://media.istockphoto.com/photos/hamburger-with-cheese-and-french-fries-picture-id1188412964?k=20&m=1188412964&s=612x612&w=0&h=Ow-uMeygg90_1sxoCz-vh60SQDssmjP06uGXcZ2MzPY=",
         "Preu": 15,
         "Quantitat": 2
       }
@@ -32,7 +32,7 @@
         "idBeguda": 1,
         "Nom": "Cocacola",
         "Descripció": "Light",
-        "Imatge": "Foto",
+        "Imatge": "https://anagramacomunicacion.com/wordpress/wp-content/uploads/2013/05/Coca-Cola-light-imagen-2013.jpg",
         "Preu": 3,
         "Quantitat": 4
       }
