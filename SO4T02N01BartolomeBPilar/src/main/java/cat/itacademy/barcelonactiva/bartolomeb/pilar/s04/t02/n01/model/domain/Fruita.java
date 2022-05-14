@@ -1,7 +1,5 @@
 package cat.itacademy.barcelonactiva.bartolomeb.pilar.s04.t02.n01.model.domain;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,15 +9,15 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Fruites")
-public class Fruita implements Serializable{
-	private static final long serialVersionUID = 1L;
+public class Fruita {
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="id")
 	private int id;
-	@Column(name = "Nom", nullable = false)
+	@Column(name = "Nom", length = 100, unique = true, nullable = false)
 	private String nom;
-	@Column(name = "Quantitat Kg", nullable = false)
+	@Column(name = "Quantitat_Kg")
 	private int quantitatQuilos;	
 	
 	public Fruita (int id, String nom, int quantitatQuilos) {
@@ -49,7 +47,7 @@ public class Fruita implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return "Fruita [id= " +id+ ", Nom= " +nom+ ", Quantitat Kg= " +quantitatQuilos+ "]";
+		return "Fruita [id= " +id+ ", Nom= " +nom+ ", Quantitat_Kg= " +quantitatQuilos+ "]";
 	}
 }
 	/*public String toString(){
@@ -58,7 +56,7 @@ public class Fruita implements Serializable{
         value.append(id);
         value.append(", Nom ");
         value.append(nom);
-        value.append(", Quantitad Kg: ");
+        value.append(", Quantitad_Kg: ");
         value.append(quantitatQuilos);
         
         return value.toString();

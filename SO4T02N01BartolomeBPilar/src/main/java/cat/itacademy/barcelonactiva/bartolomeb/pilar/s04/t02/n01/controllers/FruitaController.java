@@ -6,19 +6,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import cat.itacademy.barcelonactiva.bartolomeb.pilar.s04.t02.n01.model.domain.Fruita;
 import cat.itacademy.barcelonactiva.bartolomeb.pilar.s04.t02.n01.model.services.IFruitaService;
 
-@Controller
+@RestController
 public class FruitaController {
 
 	@Autowired
@@ -45,11 +45,11 @@ public class FruitaController {
 	}
 
 	@PutMapping("fruita")
-	public ResponseEntity<Fruita> updatefruita(@RequestBody Fruita fruita) {
+	public ResponseEntity<Fruita> updateFruita(@RequestBody Fruita fruita) {
 		fruitaService.updateFruita(fruita);
 		return new ResponseEntity<Fruita>(fruita, HttpStatus.OK);
 	}
-
+	
 	@DeleteMapping("fruita/{id}")
 	public ResponseEntity<Void> deletefruita(@PathVariable("id") int id) {
 		fruitaService.deleteFruita(id);
