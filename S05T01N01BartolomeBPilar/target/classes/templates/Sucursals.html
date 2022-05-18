@@ -1,0 +1,53 @@
+
+	
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<!-- CSS only -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h1>Llista Sucursals</h1>
+		</div>
+		<table class="table table-stripped table-bordered">
+  			<thead class="table-dark">
+  				<tr>
+  					<th>Pk_SucursalID</th>
+					<th>Nom</th>
+					<th>País</th>
+					
+				<tr>	
+			</thead>
+  			<tbody>
+ 				<tr th:each="sucursalDTO: ${DATA_SucursalsDtoLlista}">
+					<td th:text="${sucursalDTO.pk_SucursalID}"></td>
+					<td th:text="${sucursalDTO.nomSucursal}"></td>
+					<td th:text="${sucursalDTO.paisSucursal}"></td>
+					
+					<td><a class="btn btn-outline-info"
+							th:href="@{/ConsultaSucursal/__${sucursalDTO.pk_SucursalID}__}"
+							role="button">Consulta Sucursal</a></td>
+					<td><a class="btn btn-outline-warning"
+							th:href="@{/ModificaSucursal/__${sucursalDTO.pk_SucursalID}__}" role="button">Editar</a></td>
+
+					<td><a class="btn btn-outline-danger"
+						th:href="@{/EliminaSucursal/__${sucursalDTO.pk_SucursalID}__}"
+						role="button"
+						onclick="return confirm('Confirmi que vol eliminar aquesta sucursal')">Eliminar</a></td>	
+				<tr>	 			  
+ 			</tbody>
+		</table>	
+	</div>	
+
+	<br> <a class="btn btn-outline-primary" th:href="@{/NovaSucursal}"
+			role="Button">Afegir sucursal</a>
+	</div>
+</body>
+</html>

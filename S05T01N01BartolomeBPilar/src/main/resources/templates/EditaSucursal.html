@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<!-- CSS only -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+	
+		</div>
+		<h3>Editar</h3>
+		<form th:object="${DATA_SucursalsDtoFormulari}" method="post"
+			th:action="@{/GuardarSucursal}">
+
+			<input type="hidden" th:field="*{pk_SucursalID}">
+
+			<div class="form-group">
+
+				<label class="cloud-label">Nom</label> <input type="text"
+					th:field="*{nomSucursal}"> <br> 
+				<label class="cloud-label">País</label><input type="text"
+					th:field="*{paisSucursal}"> 
+			</div>
+			<button type="submit" class="btn btn-outline-success">Guardar</button>
+			<a class="btn btn-outline-danger" th:href="@{/LlistaSucursals}" role="button">Descartar</a>
+		</form>
+</body>
+</html>
