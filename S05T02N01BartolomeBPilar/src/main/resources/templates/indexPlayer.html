@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Player</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  		<a class="navbar-brand" href="">App Joc de Daus</a>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" 
+  			data-target="#navbarNav" aria-controls="navbarNav" 
+  			aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+ 		<div class="collapse navbar-collapse" id="navbarNav">
+   			<ul class="navbar-nav">
+     			<li class="nav-item"><a class="nav-link" href="/">Opcions del jugador</a></li>
+   			</ul>
+  		</div>
+	</nav>
+
+	<div class="container text-center">
+		<div>
+			<h1>Que vols fer?</h1>
+		</div>
+		<div class= "p-2">
+			<a class="h2" th:href="@{/players/{id}}">Modificar el Nom</a>
+		</div>
+		<div class= "p-2">
+			<a class="h2" th:href="@{/players/{id}/formulari}">Jugar una partida</a>
+		</div>
+		<div class= "p-2">
+			<a class="h2" th:href="@{/players/{id}/games}">Llistat de partides amb percentatges d'exit</a>
+		</div>
+		<div class= "p-2">
+			<a class="h2" th:href="@{/players/{id}/games}">Eliminar totes les partides anteriors</a>	
+		</div>
+		<div class= "p-2">
+			<a class="h2" th:href="@{/players}">Llistat de tots els jugadors amb percentatges d'exit</a>
+		</div>
+		<div class= "p-2">
+			<a class="h2" th:href="@{/players/ranking}">Percentatge d'exit de tots els jugadors actuals</a>
+		</div>
+		<div class= "p-2">
+			<a class="h2" th:href="@{/players/ranking/winner}">Jugador amb millor percentatge d'exit</a>	
+		</div>
+		<div class= "p-2">
+			<a class="h2" th:href="@{/players/ranking/loser}">Jugador amb pitjor percentatge d'exit</a>
+				
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</div>
+	</div>
+</body>
+</html>

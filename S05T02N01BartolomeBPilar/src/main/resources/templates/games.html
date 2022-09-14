@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Player</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  		<a class="navbar-brand" href="">App Joc de Daus</a>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" 
+  			data-target="#navbarNav" aria-controls="navbarNav" 
+  			aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+ 		<div class="collapse navbar-collapse" id="navbarNav">
+   			<ul class="navbar-nav">
+     			<li class="nav-item"><a class="nav-link" href="/">Partides</a></li>
+   			</ul>
+  		</div>
+	</nav>
+
+	<div class="container text-center">
+		<div>
+			<h1>Llista de partides</h1>
+		</div>
+		<br>
+		<div>
+			<table class="table table-bordered">
+				<thead class="thead-dark">
+					<tr>
+						<th>ID</th>
+						<th>Dau 1</th>
+						<th>Dau 2</th>
+						<th>Partida</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="game: ${llistaGames}">
+						<td th:text= "${game.idGame}"></td>
+						<td th:text= "${game.dau1}"></td>
+						<td th:text= "${game.dau2}"></td>
+						<td th:text= "${game.guanyar}"></td>
+					</tr>		
+				</tbody>
+			</table>
+		</div>
+	</div>
+	
+</body>
+</html>
